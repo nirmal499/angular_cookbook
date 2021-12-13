@@ -1,0 +1,23 @@
+$ ng new --help
+$ ng new comp-comm -g -S --minimal
+
+The inout module will contain everything of "Components communication using
+component @Input(s) and @Output(s)"
+
+$ ng g m inout
+CREATE src/app/inout/inout.module.ts (191 bytes)
+
+$ ng g c inout/inout --flat
+CREATE src/app/inout/inout.component.ts (262 bytes)
+UPDATE src/app/inout/inout.module.ts (265 bytes)
+
+$ ng g c inout/notification-button
+CREATE src/app/inout/notification-button/notification-button.component.ts (303 bytes)
+UPDATE src/app/inout/inout.module.ts (397 bytes)
+
+$ ng g c inout/notification-manager
+CREATE src/app/inout/notification-manager/notification-manager.component.ts (306 bytes)
+UPDATE src/app/inout/inout.module.ts (533 bytes)
+
+
+
