@@ -1,0 +1,22 @@
+<h4>
+  Providing different services to the app with the same Aliased class provider
+</h4>
+<div class="spacer"></div>
+<div class="links">
+  <a routerLink="/employee"
+    ><div class="btn btn-light" routerLink="/employee">Employee Section</div></a
+  >
+  <a routerLink="/admin"><div class="btn btn-light">Admin Section</div></a>
+</div>
+<div class="logout-btn">
+  <button class="btn btn-light" *ngIf="isLoggedIn" (click)="logout()">
+    Logout
+  </button>
+</div>
+
+<app-loader *ngIf="isLoadingRoute"></app-loader>
+<div class="content" role="main">
+  <div class="page-section">
+    <router-outlet></router-outlet>
+  </div>
+</div>
