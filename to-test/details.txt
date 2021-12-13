@@ -1,0 +1,53 @@
+$ ng new to-test -g -S --minimal
+
+# Creating modules of app in modules directory
+$ ng g m modules/auth
+$ ng g m modules/public
+$ ng g m modules/shared
+
+# Creating components for 'public' module present in modules dir
+$ ng g c modules/public/components/home
+$ ng g c modules/public/components/all-books
+$ ng g c modules/public/components/book-details
+
+# Creating components for 'auth' module present in modules dir
+$ ng g c modules/auth/components/login
+$ ng g c modules/auth/components/signup
+$ ng g c modules/auth/components/change-password
+$ ng g c modules/auth/auth --flat
+[With --flat flag new folder is not created for 'auth.component.ts']
+CREATE src/app/modules/auth/auth.component.ts (259 bytes)
+UPDATE src/app/modules/auth/auth.module.ts (581 bytes)
+
+# Creating components for 'app' module which is the root of our project
+$ ng g c components/about-us
+$ ng g c components/how-it-works
+
+# Separating routing for feature modules[modules present inside modules directory]
+$ ng g m modules/auth/auth-routing
+CREATE src/app/modules/auth/auth-routing/auth-routing.module.ts (197 bytes)
+
+
+# Create a module with it routing
+$ ng g m modules/user --routing --module=app
+CREATE src/app/modules/user/user-routing.module.ts (247 bytes)
+CREATE src/app/modules/user/user.module.ts (272 bytes)
+UPDATE src/app/app.module.ts (715 bytes)
+
+---------------------------------------------------------------------
+$ ng g c modules/user/user --flat
+CREATE src/app/modules/user/user.component.ts (259 bytes)
+UPDATE src/app/modules/user/user.module.ts (343 bytes)
+
+$ ng g c modules/user/components/add-book
+CREATE src/app/modules/user/components/add-book/add-book.component.ts (270 bytes)
+UPDATE src/app/modules/user/user.module.ts (442 bytes)
+
+$ ng g c modules/user/components/delete-book
+CREATE src/app/modules/user/components/delete-book/delete-book.component.ts (279 bytes)
+UPDATE src/app/modules/user/user.module.ts (553 bytes)
+
+
+
+
+
